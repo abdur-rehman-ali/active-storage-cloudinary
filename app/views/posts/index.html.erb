@@ -18,7 +18,8 @@
         <td><%= post.title %></td>
         <td><%= post.description %></td>
         <% if post.image.attached?%>
-        <td><%= image_tag post.image, width:'30px' %></td>
+        <td><%= image_tag post.image, width:'30px' %>
+        <%= link_to post.image.filename, post.image%> </td>
         <% else %>
         <td>No profile image</td>
         <% end %>
